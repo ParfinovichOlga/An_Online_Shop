@@ -1,0 +1,23 @@
+{% include "header.html" %}
+{{ bootstrap.load_css() }}
+
+<div class="container">
+    {% for product in products %}
+    <div class="container mb-5">
+    <div class="row featurette">
+      <div class="col-md-8 order-md-2">
+        <a href="{{url_for('product_info', product_id=product.id)}}" style="color:black">{{product.title}}</a>
+
+        <p class="featurette-heading fw-normal lh-1 pb-3 pt-3"> <b>{{product.price}}$</b> </p>
+        <p>Count: {{product.count}}</p>
+        <p>Rating: {{product.rating}}</p>
+
+      </div>
+      <div class="col-md-4 order-md-1 px-5">
+        <img src="{{product.image}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect></img>
+      </div>
+    </div>
+</div>
+    {% endfor %}
+</div>
+{% include "footer.html" %}

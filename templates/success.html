@@ -1,0 +1,16 @@
+{% include "header.html" %}
+{{ bootstrap.load_css() }}
+
+<div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+
+    <img src="../static/assets/img/check-circle.svg" class="bi mt-5 mb-3" width="48" height="48"><use xlink:href="#check2-circle"></use></img>
+    <h1 class="text-body-emphasis" style="color:green">Payment completed</h1>
+    <p class="col-lg-6 mx-auto mb-4">
+      Thank you!
+    </p>
+    <a href="{{url_for('all_products')}}" class="btn btn-primary px-5 mb-5" type="button">
+      Continue shopping
+    </a>
+  </div>
+
+{% include "footer.html" %}
